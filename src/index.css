@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+
+/* Smooth scrolling for the in-page anchor navigation, with an offset so
+   section headings aren't hidden under the sticky navbar. */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  @apply bg-slate-950 text-slate-300 antialiased;
+}
+
+/* Offset anchor targets to account for the sticky navbar height */
+section[id] {
+  scroll-margin-top: 5rem;
+}
